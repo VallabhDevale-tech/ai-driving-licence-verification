@@ -17,7 +17,7 @@
 
 The AI Driving Licence Verification System is a smart and scalable solution designed to authenticate drivers using biometric verification (Face Recognition & Fingerprint) integrated with a Flask-based web system and Firebase database.
 
-This system is developed with a real-world deployment approach**, enabling seamless integration with existing RTO infrastructure without requiring major system changes.
+This system is developed with a real-world deployment approach, enabling seamless integration with existing RTO infrastructure without requiring major system changes.
 
 ---
 
@@ -31,7 +31,7 @@ Traditional driving licence verification systems rely on manual checks or ID-bas
 
 This system introduces AI-based biometric verification using Face Recognition and Fingerprint Authentication to ensure secure, real-time identity validation.  
 
-It is designed to integrate seamlessly with existing **RTO infrastructure**, making it scalable and cost-efficient.
+It is designed to integrate seamlessly with existing RTO infrastructure, making it scalable and cost-efficient.
 
 ---
 
@@ -41,7 +41,7 @@ It is designed to integrate seamlessly with existing **RTO infrastructure**, mak
 
 * Supports Face Recognition and Fingerprint Authentication
 * System validates identity using any one or both biometric methods
-* Designed for integration with existing **biometric hardware systems
+* Designed for integration with existing biometric hardware systems
 
 ---
 
@@ -97,7 +97,6 @@ It is designed to integrate seamlessly with existing **RTO infrastructure**, mak
 * Triggered when mismatch occurs
 * Re-checks biometric identity
 * Reduces:
-
   * False rejection
   * Errors
 * Ensures high reliability
@@ -112,6 +111,7 @@ It is designed to integrate seamlessly with existing **RTO infrastructure**, mak
   * Smart city systems
   * Law enforcement tools
   * National identity systems
+    
 * Helps:
 
   * Reduce fraud
