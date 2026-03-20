@@ -19,6 +19,10 @@ The AI Driving Licence Verification System is a smart and scalable solution desi
 
 This system is developed with a real-world deployment approach, enabling seamless integration with existing RTO infrastructure without requiring major system changes.
 
+## NOTE 
+
+I had make this project as a software prototype, you can make this project as a hardware prototype using raspberry, camera module and fingerprint sensor/module. 
+
 ---
 
 ## Problem Statement
@@ -209,7 +213,7 @@ SECRET_KEY=your_secret_key
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 <p align="center">
 
