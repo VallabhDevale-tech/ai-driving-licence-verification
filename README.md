@@ -7,7 +7,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue">
   <img src="https://img.shields.io/badge/Flask-WebApp-green">
-  <img src="https://img.shields.io/badge/Firebase-RealtimeDB-orange">
+  <img src="https://img.shields.io/badge/Firebase-Firestore-orange">
   <img src="https://img.shields.io/badge/Status-Active-success">
 </p>
 
