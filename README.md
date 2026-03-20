@@ -211,6 +211,12 @@ SECRET_KEY=your_secret_key
   <img src="images/challan_generation.png" width="80%">
 </p>
 
+## Demo
+
+<p align="center">
+  <img src="images/demo.gif" width="80%">
+</p>
+
 ---
 
 ## Tech Stack
