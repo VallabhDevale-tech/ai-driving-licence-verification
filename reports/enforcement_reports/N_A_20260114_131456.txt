@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-14 13:14:56.436785
+Challan Number : CH-20260114-131454
+Driver Name    : UNKNOWN
+Licence Number : N/A
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : No High Security Registration Plate (HSRP)
+Sub Offence    : Damaged or tampered HSRP
+Fine Amount   : ₹5000
+Legal Section : MV Act 2019 - Section 39
+Severity      : Medium
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

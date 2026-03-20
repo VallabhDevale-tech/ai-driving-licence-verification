@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-12 17:26:42.096968
+Challan Number : CH-20260112-172639
+Driver Name    : Vallabh
+Licence Number : MH12-2024-7654321
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Driving without Valid Driving Licence
+Sub Offence    : Allowing unauthorized person to drive
+Fine Amount   : ₹5000
+Legal Section : MV Act 2019 - Section 180
+Severity      : High
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

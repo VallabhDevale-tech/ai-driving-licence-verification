@@ -1,0 +1,20 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-06 13:42:58.704992
+Driver Name    : Vallabh
+Licence Number : MH12-2024-7654321
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Suspected Drunk Driving
+Sub Offence    : Refusal to undergo breath analyzer test
+Fine Amount   : ₹10000
+Legal Section : MV Act 2019 – Section 185
+Severity      : Critical
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : N/A
+Payment Status: N/A
+========================================

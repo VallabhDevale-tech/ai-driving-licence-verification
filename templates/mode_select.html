@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart RTO System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mode_select.css') }}">
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<h1 class="title">Smart RTO System</h1>
+<p class="subtitle">Select your operation mode</p>
+
+<div class="card-container">
+
+    <!-- ✅ Licence Mode -->
+    <a href="{{ url_for('licence_mode') }}" class="mode-card">
+        <img src="{{ url_for('static', filename='images/licence.png') }}">
+        <h2>Licence Mode</h2>
+        <p>Manage and verify driving licences.</p>
+    </a>
+
+    <!-- ✅ HSRP Mode -->
+    <a href="{{ url_for('hsrp_mode') }}" class="mode-card">
+        <img src="{{ url_for('static', filename='images/hsrp.png') }}">
+        <h2>HSRP Mode</h2>
+        <p>Verify vehicle registration plates.</p>
+    </a>
+
+    <!-- ✅ Combined Mode -->
+    <a href="{{ url_for('combined_mode') }}" class="mode-card">
+        <img src="{{ url_for('static', filename='images/combined.png') }}">
+        <h2>Combined Mode</h2>
+        <p>Perform both licence and vehicle checks.</p>
+    </a>
+
+</div>
+
+</body>
+</html>

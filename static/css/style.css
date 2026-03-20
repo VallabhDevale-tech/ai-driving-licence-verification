@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background */
+.bg {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1523731407965-2430cd12f5e4")
+        center / cover no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+/* Center */
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    width: 420px;
+    padding: 40px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+/* Entry animation */
+.animate-in {
+    animation: slideFade 0.8s ease forwards;
+}
+
+@keyframes slideFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.header p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+/* System status */
+.system-status {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.system-status .ok {
+    color: #7CFC98;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+/* Inputs */
+.input-box {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.6);
+}
+
+.eye {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Security note */
+.security-note {
+    font-size: 12px;
+    text-align: center;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,123,255,0.6);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Error */
+.error-box {
+    background: rgba(255,0,0,0.25);
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Auth steps */
+.auth-steps {
+    display: none;
+    margin-top: 15px;
+    font-size: 12px;
+    color: white;
+}
+
+.auth-steps div {
+    margin-top: 6px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+}

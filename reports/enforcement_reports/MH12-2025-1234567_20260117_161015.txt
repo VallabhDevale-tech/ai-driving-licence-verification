@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-17 16:10:15.218398
+Challan Number : CH-20260117-161012
+Driver Name    : Harsh Anil Khandekar
+Licence Number : MH12-2025-1234567
+Vehicle Number : N/A
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Driving without Valid Driving Licence
+Sub Offence    : Using fake licence / fake RC
+Fine Amount   : ₹10000
+Legal Section : MV Act 2019 - Section 192
+Severity      : Critical
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : ONLINE
+Payment Status: PENDING
+========================================

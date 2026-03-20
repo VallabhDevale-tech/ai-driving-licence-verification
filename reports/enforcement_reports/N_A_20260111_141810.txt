@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-11 14:18:10.853503
+Challan Number : CH-20260111-141809
+Driver Name    : UNKNOWN
+Licence Number : N/A
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Suspected Drunk Driving
+Sub Offence    : Refusal to undergo breath analyzer test
+Fine Amount   : ₹10000
+Legal Section : MV Act 2019 - Section 185
+Severity      : Critical
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

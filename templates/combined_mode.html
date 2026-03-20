@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Mode</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/combined.css') }}">
+</head>
+
+<body>
+
+<div class="page-bg"></div>
+
+<div class="main-box">
+
+    <h1 class="main-title">✅ COMBINED MODE</h1>
+    <p class="subtitle">Verify <b>Licence + HSRP</b> together in one click</p>
+
+    {% if error %}
+        <div class="error-box">⚠ {{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('combined_verify') }}" id="combinedForm">
+
+        <!-- ✅ LICENCE SECTION -->
+        <div class="section-card">
+            <h2>LICENCE VERIFICATION</h2>
+            <p class="subtext">Enter Fingerprint ID and Capture Face</p>
+
+            <input type="number" name="fingerprint_id" id="fingerprint_id"
+                   class="input-box" placeholder="Enter Fingerprint ID" required>
+
+            <!-- ✅ CAMERA -->
+            <div class="camera-box">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+            </div>
+
+            <div class="btn-row">
+                <button type="button" class="btn blue" id="startCamBtn">📷 Start Camera</button>
+                <button type="button" class="btn green" id="captureBtn" disabled>📸 Capture Face</button>
+            </div>
+
+            <div class="counter" id="faceCounter">Face Captured: ❌ NO</div>
+
+            <!-- ✅ Preview -->
+            <div class="preview-grid" id="facePreview"></div>
+
+            <!-- ✅ Hidden base64 face input -->
+            <input type="hidden" name="face_sample" id="face_sample">
+        </div>
+
+        <!-- ✅ HSRP SECTION -->
+        <div class="section-card">
+            <h2>HSRP VERIFICATION</h2>
+            <p class="subtext">Enter Vehicle Number Plate</p>
+
+            <input type="text" name="hsrp_number" id="hsrp_number"
+                   class="input-box" placeholder="Enter HSRP Number Plate (example: MH12AB1234)" required>
+        </div>
+
+        <div class="btn-row">
+            <button type="submit" class="btn green" id="verifyBtn" disabled>✅ VERIFY COMBINED</button>
+        </div>
+
+    </form>
+
+    <div class="btn-row" style="margin-top: 18px;">
+        <a href="{{ url_for('mode_select') }}" class="btn gray">⬅ Back</a>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/combined.js') }}"></script>
+
+</body>
+</html>

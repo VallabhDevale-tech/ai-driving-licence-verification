@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-17 00:19:49.984545
+Challan Number : CH-20260117-001943
+Driver Name    : Vallabh Sachin Devale
+Licence Number : MH12-2024-7654321
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Driving without Valid Insurance
+Sub Offence    : Insurance not available
+Fine Amount   : ₹2000
+Legal Section : MV Act 2019 - Section 146
+Severity      : Medium
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : ONLINE
+Payment Status: PENDING
+========================================

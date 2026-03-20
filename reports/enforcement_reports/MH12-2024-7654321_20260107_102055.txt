@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-07 10:20:55.934035
+Challan Number : CH-20260107-102052
+Driver Name    : Vallabh
+Licence Number : MH12-2024-7654321
+Vehicle Number : MH10BC2007
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : Suspected Drunk Driving
+Sub Offence    : Alcohol detected above permissible limit
+Fine Amount   : ₹10000
+Legal Section : MV Act 2019 – Section 185
+Severity      : Critical
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

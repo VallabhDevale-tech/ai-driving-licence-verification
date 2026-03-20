@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-07 00:58:08.815465
+Challan Number : CH-20260107-005806
+Driver Name    : Vallabh
+Licence Number : MH12-2024-7654321
+Vehicle Number : N/A
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : No High Security Registration Plate (HSRP)
+Sub Offence    : HSRP not installed
+Fine Amount   : ₹5000
+Legal Section : MV Act 2019 – Section 39
+Severity      : Medium
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+==================================================
+Date & Time      : 2026-03-09 15:57:11.389487
+Challan Number   : CH-20260309-155709
+Driver Name      : Vallabh Sachin Devale
+Licence Number   : MH12-2024-7654321
+Vehicle Number   : N/A
+
+OFFENCE DETAILS
+--------------------------------------------------
+Main Offence     : Invalid Document
+Sub Offence      : Licence Verification Failed
+Total Fine       : ₹5000
+Legal Section    : MV Act 2019 - Section 3
+Severity         : High
+
+PAYMENT DETAILS
+--------------------------------------------------
+Payment Mode     : CASH
+Payment Status   : PAID
+==================================================

@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page-bg {
+    position: fixed;
+    inset: 0;
+    background: url("../images/rto_bg.jpg") center/cover no-repeat;
+    filter: blur(6px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+.main-card {
+    width: 500px;
+    margin: 80px auto;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.main-card h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.subtext {
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn.green {
+    background: #00c853;
+    color: white;
+}
+
+.btn.green:hover {
+    background: #00a846;
+    transform: scale(1.02);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.85;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+.error-box {
+    background: rgba(255, 0, 0, 0.25);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/licence_verify.css') }}">
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="result-box">
+
+    <h1>Verification Result</h1>
+
+    {% if error %}
+        <div class="status invalid">❌ {{ error }}</div>
+    {% else %}
+        {% if result.status == "VALID" %}
+            <div class="status valid">✅ DRIVER VERIFIED</div>
+        {% else %}
+            <div class="status invalid">❌ ACCESS DENIED</div>
+        {% endif %}
+
+        <div class="info">
+            <p><b>Name:</b> {{ result.name }}</p>
+            <p><b>Licence Number:</b> {{ result.licence }}</p>
+            <p><b>Expiry Date:</b> {{ result.expiry }}</p>
+        </div>
+    {% endif %}
+
+    <div class="btns">
+        <a href="{{ url_for('licence_mode') }}" class="btn primary">Verify Again</a>
+        <a href="{{ url_for('mode_select') }}" class="btn secondary">Back</a>
+    </div>
+
+</div>
+
+</body>
+</html>

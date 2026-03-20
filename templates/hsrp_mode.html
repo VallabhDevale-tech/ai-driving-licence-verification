@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSRP Verification Mode - Smart RTO</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hsrp_mode.css') }}">
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="main-card">
+    <h1>HSRP Verification Mode</h1>
+    <p class="subtext">Enter HSRP Number Plate to verify vehicle registration</p>
+
+    {% if error %}
+        <div class="error-box">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('hsrp_verify') }}">
+        <label>HSRP Number Plate</label>
+        <input type="text" name="hsrp_number" placeholder="Example: MH12AB1234" required>
+
+        <button type="submit" class="btn green">✅ Verify HSRP</button>
+    </form>
+
+    <a href="{{ url_for('mode_select') }}" class="back-btn">⬅ Back</a>
+</div>
+
+</body>
+</html>

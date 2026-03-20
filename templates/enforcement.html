@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enforcement Mode</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/licence_verify.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/enforcement_checkbox.css') }}">
+    <script defer src="{{ url_for('static', filename='js/enforcement_checkbox.js') }}"></script>
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="result-box">
+    <h1>RTO OFFICER ENFORCEMENT MODE</h1>
+
+    {% if result.status in ["LICENCE VALID", "HSRP VALID", "LICENCE + HSRP VALID"] %}
+        <div class="status valid">✅ VERIFIED</div>
+    {% else %}
+        <div class="status invalid">❌ NOT VERIFIED</div>
+    {% endif %}
+
+    <div class="info">
+
+        {% if result.mode == "LICENCE" %}
+            <p><b>Name:</b> {{ result.name }}</p>
+            <p><b>Licence Number:</b> {{ result.licence }}</p>
+            <p><b>Expiry Date:</b> {{ result.expiry }}</p>
+        {% endif %}
+
+        {% if result.mode == "HSRP" %}
+            <p><b>HSRP Number:</b> {{ result.hsrp_no }}</p>
+            <p><b>Owner Name:</b> {{ result.owner }}</p>
+            <p><b>Vehicle Type:</b> {{ result.vehicle_type }}</p>
+            <p><b>RTO:</b> {{ result.rto }}</p>
+            <p><b>Plate Status:</b> {{ result.plate_status }}</p>
+        {% endif %}
+
+        {% if result.mode == "COMBINED" %}
+            <p><b>Name:</b> {{ result.name }}</p>
+            <p><b>Licence Number:</b> {{ result.licence }}</p>
+            <p><b>Expiry Date:</b> {{ result.expiry }}</p>
+
+            <hr style="opacity:0.2;">
+
+            <p><b>HSRP Number:</b> {{ result.hsrp_no }}</p>
+            <p><b>Owner Name:</b> {{ result.owner }}</p>
+            <p><b>Vehicle Type:</b> {{ result.vehicle_type }}</p>
+            <p><b>RTO:</b> {{ result.rto }}</p>
+            <p><b>Plate Status:</b> {{ result.plate_status }}</p>
+        {% endif %}
+
+    </div>
+
+<form method="POST" action="/submit_enforcement" id="enforcementForm">
+
+<h3 class="section-title">Select Offence</h3>
+
+<div class="card-grid" id="offenceGrid">
+
+{% set ns = namespace(i=1) %}
+
+{% for key, off in offences.items() %}
+
+    {% if result.mode == "HSRP" and key == "1" %}
+        {# skip licence offence #}
+
+    {% elif result.mode == "LICENCE" and key == "2" %}
+        {# skip hsrp offence #}
+
+    {% else %}
+
+        <label class="select-card">
+            <input type="radio"
+                   name="offence_id"
+                   value="{{ key }}"
+                   onchange="showSubOffences('{{ key }}')"
+                   required>
+
+            <div class="card-body">
+                <h4>{{ ns.i }}. {{ off.name }}</h4>
+                <p>Click to select offence</p>
+            </div>
+        </label>
+
+        {% set ns.i = ns.i + 1 %}
+
+    {% endif %}
+
+{% endfor %}
+
+</div>
+
+<div id="noViolationMsg" style="display:none; margin-top:15px;">
+    <div style="
+        background: rgba(0,255,0,0.15);
+        border: 1px solid rgba(0,255,0,0.4);
+        padding: 12px;
+        border-radius: 12px;
+        text-align:center;
+        font-weight: 700;
+        color: #bfffc7;">
+        ✅ No offence recorded. Driver allowed to continue.
+    </div>
+</div>
+
+<div id="subOffenceSection" style="display:none;">
+    <h3 class="section-title">Select Sub Offence</h3>
+    <div class="card-grid" id="subOffenceGrid"></div>
+</div>
+
+<div id="paymentSection" style="display:none;">
+    <h3 class="section-title">Select Payment Mode</h3>
+
+    <div class="card-grid">
+
+        <label class="select-card">
+            <input type="radio" name="payment_mode" value="ONLINE" onchange="enableGenerate()" required>
+            <div class="card-body">
+                <h4>Online Payment</h4>
+                <p>UPI / QR Payment</p>
+            </div>
+        </label>
+
+        <label class="select-card">
+            <input type="radio" name="payment_mode" value="CASH" onchange="enableGenerate()" required>
+            <div class="card-body">
+                <h4>Cash Payment</h4>
+                <p>Officer Collect Cash</p>
+            </div>
+        </label>
+
+    </div>
+</div>
+
+<div class="center-btn">
+    <button type="submit"
+            class="btn primary"
+            id="generateBtn"
+            disabled
+            style="display:none;">
+        ✅ Generate Challan
+    </button>
+</div>
+
+</form>
+
+<div class="btns" style="margin-top:15px;">
+
+{% if result.mode == "LICENCE" %}
+    <a href="{{ url_for('licence_mode') }}" class="btn secondary">Verify Again</a>
+
+{% elif result.mode == "HSRP" %}
+    <a href="{{ url_for('hsrp_mode') }}" class="btn secondary">Verify Again</a>
+
+{% else %}
+    <a href="{{ url_for('mode_select') }}" class="btn secondary">Verify Again</a>
+{% endif %}
+
+<a href="{{ url_for('mode_select') }}" class="btn secondary">Back</a>
+
+</div>
+
+</div>
+
+<script>
+const OFFENCES = {{ offences | tojson }};
+</script>
+
+</body>
+</html>

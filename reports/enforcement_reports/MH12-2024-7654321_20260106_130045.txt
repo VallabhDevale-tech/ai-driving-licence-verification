@@ -1,0 +1,9 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-06 13:00:45.569759
+Driver Name    : Vallabh
+Licence Number : MH12-2024-7654321
+Vehicle Number : N/A
+
+Main Offence   : No High Security Registration Plate (HSRP)
+Sub Offence    : HSRP number mismatch

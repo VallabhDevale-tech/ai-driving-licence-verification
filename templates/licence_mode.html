@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licence Mode - Smart RTO</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/licence_mode.css') }}">
+    <script defer src="{{ url_for('static', filename='js/licence_mode.js') }}"></script>
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="main-box">
+    <h1 class="title">Licence Verification Mode</h1>
+    <p class="subtitle">Enter Fingerprint ID and Capture Face</p>
+
+    <form method="POST" action="{{ url_for('licence_verify') }}" enctype="multipart/form-data">
+
+        <div class="input-box">
+            <label>Fingerprint ID</label>
+            <input type="number" name="fingerprint_id" placeholder="Enter Fingerprint ID" required>
+        </div>
+
+        <div class="input-box">
+            <label>Select Camera</label>
+            <select id="cameraSelect" class="camera-select"></select>
+        </div>
+
+        <div class="camera-section">
+            <video id="video" autoplay playsinline muted></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+
+        <p id="cameraError" class="camera-error"></p>
+
+        <input type="file" id="face_image" name="face_image" style="display:none;" required>
+
+        <div class="btn-group">
+            <button type="button" class="btn secondary" onclick="startCamera()">Start Camera</button>
+            <button type="button" class="btn warning" onclick="capturePhoto()">Capture Face</button>
+            <button type="submit" class="btn primary">Verify Now</button>
+        </div>
+
+    </form>
+
+    <a href="{{ url_for('mode_select') }}" class="back-btn">⬅ Back</a>
+</div>
+
+</body>
+</html>

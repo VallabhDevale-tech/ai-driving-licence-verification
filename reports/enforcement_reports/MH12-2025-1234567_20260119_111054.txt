@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+========================================
+Date & Time     : 2026-01-19 11:10:54.022030
+Challan Number : CH-20260119-111049
+Driver Name    : Harsh Anil Khandekar
+Licence Number : MH12-2025-1234567
+Vehicle Number : N/A
+
+OFFENCE DETAILS
+----------------------------------------
+Main Offence   : No High Security Registration Plate (HSRP)
+Sub Offence    : HSRP not installed
+Fine Amount   : ₹5000
+Legal Section : MV Act 2019 - Section 39
+Severity      : Medium
+
+PAYMENT DETAILS
+----------------------------------------
+Payment Mode  : CASH
+Payment Status: PAID
+========================================

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challan Generated</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/licence_verify.css') }}">
+
+<style>
+.qr-box{
+    margin-top:15px;
+    text-align:center;
+}
+
+.qr-box img{
+    width:220px;
+    border-radius:12px;
+    margin-top:10px;
+    border:2px solid rgba(255,255,255,0.3);
+}
+</style>
+
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="result-box">
+
+<h1>⚠ OFFENCE CONFIRMED</h1>
+
+<div class="info">
+
+<p><b>Officer ID:</b> {{ officer_id }}</p>
+
+<!-- DRIVER / VEHICLE INFO -->
+
+{% if result.mode == "HSRP" %}
+
+<p><b>Owner Name:</b> {{ result.owner }}</p>
+<p><b>Vehicle Number:</b> {{ result.hsrp_no }}</p>
+<p><b>Vehicle Type:</b> {{ result.vehicle_type }}</p>
+
+{% elif result.mode == "COMBINED" %}
+
+<p><b>Driver:</b> {{ result.name }}</p>
+<p><b>Licence No:</b> {{ result.licence }}</p>
+
+<hr style="opacity:0.3;">
+
+<p><b>Vehicle Number:</b> {{ result.hsrp_no }}</p>
+<p><b>Owner Name:</b> {{ result.owner }}</p>
+
+{% else %}
+
+<p><b>Driver:</b> {{ result.name }}</p>
+<p><b>Licence No:</b> {{ result.licence }}</p>
+
+{% endif %}
+
+<hr style="opacity:0.3;">
+
+<p><b>Main Offence:</b> {{ main_offence }}</p>
+<p><b>Sub Offence:</b> {{ sub_offence }}</p>
+
+<!-- FINE BREAKDOWN -->
+
+{% if base_fine and base_fine > 0 %}
+<p><b>Base Invalid Fine:</b> ₹ {{ base_fine }}</p>
+{% endif %}
+
+{% if sub_fine %}
+<p><b>Sub Offence Fine:</b> ₹ {{ sub_fine }}</p>
+{% endif %}
+
+<hr style="opacity:0.2;">
+
+<p><b>Total Fine:</b> ₹ {{ fine_amount }}</p>
+
+<p><b>Legal Section:</b> {{ section }}</p>
+<p><b>Severity:</b> {{ severity }}</p>
+<p><b>Challan No:</b> {{ challan_no }}</p>
+
+<hr style="opacity:0.3;">
+
+<p><b>Payment Mode:</b> {{ payment_mode }}</p>
+
+{% if upi_link %}
+<p><b>UPI Link:</b> {{ upi_link }}</p>
+{% endif %}
+
+</div>
+
+<!-- QR PAYMENT -->
+
+{% if qr_url %}
+
+<div class="qr-box">
+
+<h3>📲 Scan QR to Pay</h3>
+
+<img src="{{ url_for('static', filename=qr_url) }}" alt="QR Code">
+
+<p style="font-size:12px; opacity:0.8;">
+QR saved in: static/{{ qr_url }}
+</p>
+
+</div>
+
+{% endif %}
+
+<div class="btns">
+
+<a href="{{ url_for('enforcement_page') }}" class="btn primary">
+Back to Enforcement
+</a>
+
+<a href="{{ url_for('mode_select') }}" class="btn secondary">
+Home
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

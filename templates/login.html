@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RTO Officer Portal</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+    <div class="card animate-in">
+
+        <div class="header">
+            <div class="icon">🏛️</div>
+            <h1>RTO Officer Portal</h1>
+            <p>Secure Government Access</p>
+        </div>
+
+        <div class="system-status">
+            <span class="ok">Firebase Connected</span>
+            <span class="ok">Camera Ready</span>
+            <span class="ok">Fingerprint Ready</span>
+        </div>
+
+        {% if error %}
+        <div class="error-box">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" id="loginForm">
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Officer ID (ADMIN_001)" autofocus required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="eye" onclick="togglePassword()">👁</span>
+            </div>
+
+            <div class="security-note">
+                🔐 Role-Based Secure Authentication
+            </div>
+
+            <button type="submit" id="loginBtn">LOG IN</button>
+        </form>
+
+        <div class="auth-steps" id="authSteps">
+            <div>✔ Validating Officer ID</div>
+            <div>✔ Verifying Role</div>
+            <div>✔ Initializing Secure Session</div>
+        </div>
+
+        <div class="footer">
+            Government of India · Ministry of Road Transport
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

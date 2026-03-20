@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconfirmation Mode</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reconfirm.css') }}">
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="main-box">
+
+    <h1 class="main-title">🔁 RECONFIRMATION MODE</h1>
+
+    {% if error %}
+        <div class="error-box">⚠ {{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/reconfirm_submit" id="reconfirmForm">
+
+        <!-- ✅ FACE RECONFIRMATION SECTION -->
+        {% if need_face %}
+        <div class="section-card">
+            <h2>FACE RECONFIRMATION</h2>
+            <p class="subtext">Capture <b>3 face samples</b> (minimum <b>2 should match</b>)</p>
+
+            <!-- ✅ LIVE CAMERA -->
+            <div class="camera-box">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+            </div>
+
+            <div class="action-row">
+                <button type="button" class="btn secondary" onclick="startCamera()">📷 Start Camera</button>
+                <button type="button" class="btn primary" onclick="captureFaceSample()">📸 Capture Face Sample</button>
+            </div>
+
+            <div class="counter" id="faceCounter">Face Samples: 0/3</div>
+
+            <!-- ✅ THUMBNAIL PREVIEW -->
+            <div class="preview-grid" id="facePreview"></div>
+
+            <!-- ✅ Hidden face sample fields -->
+            <input type="hidden" name="face_sample_1" id="face_sample_1">
+            <input type="hidden" name="face_sample_2" id="face_sample_2">
+            <input type="hidden" name="face_sample_3" id="face_sample_3">
+        </div>
+        {% endif %}
+
+        <!-- ✅ FINGERPRINT RECONFIRMATION SECTION -->
+        {% if need_fp %}
+        <div class="section-card">
+            <h2>FINGERPRINT RECONFIRMATION</h2>
+            <p class="subtext">Enter <b>3 fingerprint scans</b> (minimum <b>2 should match</b>)</p>
+
+            <input type="number" name="fp_sample_1" id="fp_sample_1" placeholder="Fingerprint Scan 1" required>
+            <input type="number" name="fp_sample_2" id="fp_sample_2" placeholder="Fingerprint Scan 2" required>
+            <input type="number" name="fp_sample_3" id="fp_sample_3" placeholder="Fingerprint Scan 3" required>
+        </div>
+        {% endif %}
+
+        <!-- ✅ SUBMIT BUTTON (hidden until complete) -->
+        <div class="submit-area">
+            <button type="submit" class="btn submit" id="submitBtn" style="display:none;">
+                ✅ Submit Reconfirmation
+            </button>
+        </div>
+
+    </form>
+
+    <div class="back-area">
+        <a href="{{ url_for('licence_mode') }}" class="btn back">⬅ Back</a>
+    </div>
+
+</div>
+
+<script>
+    const NEED_FACE = {{ "true" if need_face else "false" }};
+    const NEED_FP = {{ "true" if need_fp else "false" }};
+</script>
+
+<script src="{{ url_for('static', filename='js/reconfirm.js') }}"></script>
+
+</body>
+</html>

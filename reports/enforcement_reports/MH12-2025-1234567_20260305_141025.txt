@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+==================================================
+Date & Time      : 2026-03-05 14:10:25.454843
+Challan Number   : CH-20260305-141023
+Driver Name      : Harsh Anil Khandekar
+Licence Number   : MH12-2025-1234567
+Vehicle Number   : N/A
+
+OFFENCE DETAILS
+--------------------------------------------------
+Main Offence     : Suspected Drunk Driving
+Sub Offence      : Alcohol detected above permissible limit
+Total Fine       : ₹10000
+Legal Section    : MV Act 2019 - Section 185
+Severity         : Critical
+
+PAYMENT DETAILS
+--------------------------------------------------
+Payment Mode     : ONLINE
+Payment Status   : PENDING
+==================================================

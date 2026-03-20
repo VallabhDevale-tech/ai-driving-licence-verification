@@ -1,0 +1,21 @@
+RTO ENFORCEMENT REPORT
+==================================================
+Date & Time      : 2026-03-09 11:01:13.775219
+Challan Number   : CH-20260309-110109
+Driver Name      : UNKNOWN
+Licence Number   : N/A
+Vehicle Number   : N/A
+
+OFFENCE DETAILS
+--------------------------------------------------
+Main Offence     : Driving without Valid Driving Licence
+Sub Offence      : Driving without Driving Licence
+Total Fine       : ₹10000
+Legal Section    : MV Act 2019 - Section 3
+Severity         : High
+
+PAYMENT DETAILS
+--------------------------------------------------
+Payment Mode     : CASH
+Payment Status   : PAID
+==================================================
