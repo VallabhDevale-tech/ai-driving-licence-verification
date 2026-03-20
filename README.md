@@ -21,6 +21,20 @@ This system is developed with a real-world deployment approach**, enabling seaml
 
 ---
 
+## Problem Statement
+
+Traditional driving licence verification systems rely on manual checks or ID-based validation, which are prone to fraud, duplication, and human error.
+
+---
+
+## Proposed Solution
+
+This system introduces AI-based biometric verification using Face Recognition and Fingerprint Authentication to ensure secure, real-time identity validation.  
+
+It is designed to integrate seamlessly with existing **RTO infrastructure**, making it scalable and cost-efficient.
+
+---
+
 ##  Advanced System Capabilities
 
 ### Multi-Modal Authentication
@@ -116,6 +130,50 @@ This system is developed with a real-world deployment approach**, enabling seaml
 ✔ Automated Challan Generation
 ✔ Firebase Integration
 ✔ Web-based Dashboard
+
+---
+
+## System Workflow
+
+1. User selects mode (Licence / HSRP / Combined)
+2. System captures biometric input (Face/Fingerprint)
+3. Input processed using AI model
+4. Decision engine validates identity
+5. Firebase database is checked
+6. Output generated:
+   - Verification success/failure
+   - Challan generation (if violation detected)
+
+---
+
+## 🧩 System Architecture
+
+![Architecture](images/architecture.png)
+
+---
+
+## Payment System
+
+- UPI QR Code-based challan payment  
+- Real-time payment status updates  
+- Integrated fine management system
+
+---
+
+## Reports & Analytics
+
+- Enforcement reports generation  
+- Officer-wise fine collection tracking  
+- Historical data logging
+
+---
+
+## Environment Setup
+
+Create a `.env` file and add:
+
+FIREBASE_KEY=your_key.json  
+SECRET_KEY=your_secret_key
 
 ---
 
