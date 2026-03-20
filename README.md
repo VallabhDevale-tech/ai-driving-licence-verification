@@ -126,14 +126,14 @@ It is designed to integrate seamlessly with existing RTO infrastructure, making 
 
 ## Key Features
 
-✔ Face Recognition Authentication
-✔ Fingerprint Authentication Support
-✔ Licence Verification System
-✔ HSRP Vehicle Verification
-✔ Combined Smart Mode
-✔ Automated Challan Generation
-✔ Firebase Integration
-✔ Web-based Dashboard
+1. Face Recognition Authentication
+2. Fingerprint Authentication Support
+3. Licence Verification System
+4. HSRP Vehicle Verification
+5. Combined Smart Mode
+6. Automated Challan Generation
+7. Firebase Integration
+8. Web-based Dashboard
 
 ---
 
