@@ -146,7 +146,7 @@ It is designed to integrate seamlessly with existing **RTO infrastructure**, mak
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
 ![Architecture](images/architecture.png)
 
